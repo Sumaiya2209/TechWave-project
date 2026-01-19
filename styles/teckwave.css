@@ -83,7 +83,7 @@ body {
 /* banner style */
 .banner{
   display: grid;
-background-image: url("/images/hero-bg.png");
+background-image: url("../images/hero-bg.png");
 background-size: 100%;
 justify-content: center;
 border-top: 1px solid rgba(255, 255, 255, 0.1) ;
@@ -91,7 +91,7 @@ border-top: 1px solid rgba(255, 255, 255, 0.1) ;
 
 .banner-icon{
   display:block;
-
+  margin: 100px auto;
 }
 #img1{
   margin-left: 7.85rem;
