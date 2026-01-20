@@ -98,39 +98,58 @@ body {
   display: none;
 }
 
+/* Amination */
+.bounce-text {
+  display: inline-block;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 /* banner style */
 .banner {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-image: url("../images/hero-bg.png");
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   justify-content: center;
   border-top: 1px solid var(--line-color);
 }
 
-.banner-icon {
-  position: relative;
-  top: 80px;
-  margin-bottom: 100px;
+ .banner-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0%, 25%);
 }
 
 #img1 {
-  margin-left: 8rem;
+ position: relative;
 }
 
 #img2 {
-  position: relative;
-  left: -15rem;
-  top: -5.6rem;
-}
+  position: absolute;
 
+}   
 .banner-details {
   color: var(--primary-color);
+  margin-top: 100px;
 }
 
 .banner-title {
   font-size: 60px;
   font-weight: 800;
   margin-bottom: 8px;
+  margin-top: 140px;
 }
 
 .banner-heading {
@@ -385,32 +404,42 @@ iframe {
   }
 
   /* banner */
-  .banner {
-    background-repeat: no-repeat;
-  }
 
-  .banner-icon {
-    margin-bottom: 30px;
+  .banner{
+    background-size:150%
   }
-
+  .banner-btn{
+    margin-bottom: 80px;
+  }
+  
+   .banner-icon {
+    transform: none; 
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+  }
+  .banner-container{
+    margin: 20px 40px;
+  }
+  
+  .banner-heading .primary-text {
+    margin: 16px 50px 24px;
+  } 
+.banner-title{
+  margin-top: 120px;
+}
   #img1 {
     width: 180px;
     height: 180px;
-    position: relative;
-    left: 4.4rem;
-    top: -4.2rem;
   }
 
   #img2 {
-    position: relative;
-    left: -3.8rem;
-    top: -7.4rem;
     width: 70px;
     height: 80px;
-  }
-
-  .banner-heading .primary-text {
-    margin: 16px 50px 24px;
+  } 
+  .banner-icon{
+    position: relative;
   }
 
   /* podcast styles */
@@ -425,6 +454,9 @@ iframe {
 
   .card-info {
     margin-bottom: 50px;
+    width: 100%;      
+    height: auto;   
+    text-align: center;
   }
 
   /* choose styles */
